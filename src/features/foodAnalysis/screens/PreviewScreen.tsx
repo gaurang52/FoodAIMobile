@@ -10,7 +10,7 @@ import {
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RouteProp} from '@react-navigation/native';
-import {RootStackParamList} from '../../../app/Navigation';
+import {RootStackParamList} from '@/types/navigation';
 
 type PreviewScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -18,7 +18,7 @@ type PreviewScreenNavigationProp = NativeStackNavigationProp<
 >;
 type PreviewScreenRouteProp = RouteProp<RootStackParamList, 'Preview'>;
 
-export const PreviewScreen: React.FC = () => {
+const PreviewScreen: React.FC = () => {
   const navigation = useNavigation<PreviewScreenNavigationProp>();
   const route = useRoute<PreviewScreenRouteProp>();
   const {imageUri} = route.params;
@@ -138,3 +138,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+export default PreviewScreen;

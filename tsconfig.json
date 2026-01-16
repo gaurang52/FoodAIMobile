@@ -4,9 +4,15 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@/components": ["src/shared/components"],
-      "@/screens": ["src/features"],
+      "@/components": ["src/components"],
+      "@/assets": ["src/assets"],
+      "@/config": ["src/config"],
+      "@/lib": ["src/lib"],
+      "@/navigation": ["src/navigation"],
+      "@/providers": ["src/providers"],
       "@/store": ["src/store"],
+      "@/theme": ["src/theme"],
+      "@/types": ["src/types"],
       "@/utils": ["src/shared/utils"]
     }
   }

@@ -10,7 +10,7 @@ import {
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RouteProp} from '@react-navigation/native';
-import {RootStackParamList} from '../../../app/Navigation';
+import {RootStackParamList} from '@/types/navigation';
 
 type ResultScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -18,7 +18,7 @@ type ResultScreenNavigationProp = NativeStackNavigationProp<
 >;
 type ResultScreenRouteProp = RouteProp<RootStackParamList, 'Result'>;
 
-export const ResultScreen: React.FC = () => {
+const ResultScreen: React.FC = () => {
   const navigation = useNavigation<ResultScreenNavigationProp>();
   const route = useRoute<ResultScreenRouteProp>();
   const {result} = route.params;
@@ -215,3 +215,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+export default ResultScreen;

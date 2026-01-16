@@ -8,14 +8,14 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../../app/Navigation';
+import {RootStackParamList} from '@/types/navigation';
 
 type UploadScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
   'Upload'
 >;
 
-export const UploadScreen: React.FC = () => {
+const UploadScreen: React.FC = () => {
   const navigation = useNavigation<UploadScreenNavigationProp>();
 
   return (
@@ -117,3 +117,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+export default UploadScreen;
