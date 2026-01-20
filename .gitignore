@@ -3,9 +3,6 @@
 # dependencies
 node_modules/
 
-# React Native
-android/
-ios/
 
 # Ruby / CocoaPods
 **/Pods/
